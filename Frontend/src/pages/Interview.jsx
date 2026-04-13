@@ -80,6 +80,7 @@ const Interview = () => {
 
     try {
       let response;
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
       if (inputMode === 'pdf' && pdfFile) {
         // ── PDF upload flow ──────────────────────────────────────
@@ -88,14 +89,14 @@ const Interview = () => {
         formData.append('jobDescription', form.jobDescription);
         formData.append('selfDescription', form.selfDescription);
 
-        response = await fetch('http://localhost:3000/api/interview/generate-pdf', {
+        response = await fetch(`${API_BASE}/api/interview/generate-pdf`, {
           method: 'POST',
           credentials: 'include',
           body: formData,
         });
       } else {
         // ── Text input flow ──────────────────────────────────────
-        response = await fetch('http://localhost:3000/api/interview/generate', {
+        response = await fetch(`${API_BASE}/api/interview/generate`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',
