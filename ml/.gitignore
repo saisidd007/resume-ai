@@ -1,0 +1,20 @@
+# Node
+node_modules/
+
+# Env
+.env
+
+# Python cache (THIS is what you asked)
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Optional (recommended)
+ml_training_data.csv
+training_data.csv

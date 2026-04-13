@@ -133,7 +133,7 @@ async function logoutUserController(req,res) {
     }
     res.clearCookie("token");
     res.status(200).json({
-        massage : "User logged out successfully"
+        message: "User logged out successfully"
     })
 
 }

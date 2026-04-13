@@ -1,0 +1,45 @@
+{
+  "model_type": "linear_regression",
+  "trained_at": "2026-04-13T12:37:49.230405",
+  "training_data": "C:\\Users\\Kiran\\OneDrive\\Desktop\\AMRITA\\SIDDHU\\GENAI YT - Copy\\ml\\ml_training_data.csv",
+  "feature_columns": [
+    "semantic_similarity",
+    "skill_match",
+    "experience",
+    "domain"
+  ],
+  "target_column": "score",
+  "metrics": {
+    "linear_regression": {
+      "r2": 0.9386898563890772,
+      "mse": 10.07510557445719,
+      "mae": 2.433836668763873,
+      "rmse": 3.174130680116556,
+      "cv_r2_mean": 0.9459829888506546,
+      "cv_r2_std": 0.0068548742803368826,
+      "coefficients": {
+        "semantic_similarity": 6.407341323380988,
+        "skill_match": 7.732189197494679,
+        "experience": 6.126998006299916,
+        "domain": 5.947044382176107
+      },
+      "intercept": 52.032752249999994
+    },
+    "xgboost": {
+      "r2": 0.930717594430871,
+      "mse": 11.385188640089527,
+      "mae": 2.763847799346924,
+      "rmse": 3.3741945172277084,
+      "cv_r2_mean": 0.9288264830479003,
+      "cv_r2_std": 0.005550931955358012,
+      "feature_importance": {
+        "semantic_similarity": 0.26170000433921814,
+        "skill_match": 0.3531999886035919,
+        "experience": 0.1949000060558319,
+        "domain": 0.19020000100135803
+      }
+    }
+  },
+  "selected_model": "linear_regression",
+  "selected_cv_r2": 0.9459829888506546
+}
