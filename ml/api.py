@@ -293,7 +293,8 @@ def extract_jd():
 # ─── Main ────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    port = int(os.environ.get("ML_PORT", 5050))
+    # Render and Heroku pass the port inside 'PORT', not 'ML_PORT'
+    port = int(os.environ.get("PORT", os.environ.get("ML_PORT", 5050)))
     print(f"\nStarting ML Pipeline Server on port {port}")
     app.run(
         host="0.0.0.0",
