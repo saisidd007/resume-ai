@@ -49,8 +49,8 @@ async function registerUserController(req, res) {
         // Set cookie
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false, // set true in production (HTTPS)
-            sameSite: "lax"
+            secure: true, 
+            sameSite: "none"
         });
 
         return res.status(201).json({
@@ -108,8 +108,8 @@ async function loginUserController(req, res) {
         // Set cookie
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false, // set true in production
-            sameSite: "lax"
+            secure: true,
+            sameSite: "none"
         });
 
         return res.status(200).json({
